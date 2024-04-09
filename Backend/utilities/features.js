@@ -10,7 +10,7 @@ exports.sendCookie = (user, res, message, statusCode = 200) => {
     .cookie("token", token, {
       httpOnly: true,
       maxAge: maxAge,
-      samesite: "lax",
+      samesite: "none",
       secure: false,
     })
     .json({
