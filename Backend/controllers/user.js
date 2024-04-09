@@ -106,8 +106,6 @@ exports.logout = (req, res) => {
     .status(200)
     .cookie("token", "", {
       expires: new Date(Date.now()),
-      samesite: "lax",
-      secure: false,
     })
     .json({
       success: true,
