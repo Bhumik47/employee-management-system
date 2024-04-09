@@ -43,7 +43,5 @@ app.get("/", (req, res) => {
 app.use(errorMiddleware);
 
 app.listen(process.env.PORT, () => {
-  console.log(
-    `server is running on port ${process.env.PORT} in ${process.env.NODE_ENV} Mode`
-  );
+  console.log(`server is running on port ${process.env.PORT}`);
 });
