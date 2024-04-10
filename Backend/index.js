@@ -18,25 +18,11 @@ config({
 //middlewares
 app.use(cookieParser());
 
-//
-app.use((req, res, next) => {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://employee-management-system-opal-one.vercel.app"
-  );
-  res.header("Access-Control-Allow-Credentials", true);
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
-
 app.use(express.json());
 app.use(
   cors({
     origin:
-      "https://employee-management-system-opal-one.vercel.app" /* "https://employee-management-system-opal-one.vercel.app" "http://localhost:5173"  */,
+      "http://localhost:5173" /* "https://employee-management-system-opal-one.vercel.app" */,
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
