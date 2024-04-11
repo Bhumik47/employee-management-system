@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(
   cors({
     origin:
-      "http://localhost:5173" /* "https://employee-management-system-opal-one.vercel.app" */,
+      "https://employee-management-system-opal-one.vercel.app" /* "http://localhost:5173"*/,
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
