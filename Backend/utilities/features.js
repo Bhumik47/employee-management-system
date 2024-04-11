@@ -8,7 +8,7 @@ exports.sendCookie = (user, res, message, statusCode = 200) => {
   res
     .status(statusCode)
     .cookie("token", token, {
-      httpOnly: true,
+      httpOnly: false,
       maxAge: maxAge,
       samesite: "none",
       secure: false,
